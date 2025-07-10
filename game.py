@@ -108,11 +108,9 @@ if __name__ == '__main__':
         port = int(sys.argv[2])
     except:
         print("Starting on config")
-
-    f = open("config", "r").read().split(":")
-    server = f[0]
-    port = int(f[1])
-
+        f = open("config", "r").read().split(":")
+        server = f[0]
+        port = int(f[1])
 
     network = Network(server, port)
     game = Game(network)
